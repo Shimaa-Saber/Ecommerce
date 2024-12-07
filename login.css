@@ -1,0 +1,103 @@
+.login{
+    width: 45em;
+    height: 60em;
+    /* border: 2px black solid; */
+    background-color: white;
+    align-items: center;
+ 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;  */
+    /* margin: 0; */
+  }
+
+  #h1{
+    text-align: center;
+    padding-top: 2em;
+  }
+
+  #h2{
+    text-align: center;
+    padding-top: 0.5em;
+    font-weight: 300;
+
+  }
+  form{
+    padding-left: 2em;
+    padding-top: 2em;
+    align-items: center;
+    margin-left: 3em;
+    margin-bottom: 2em;
+  }
+
+  label{
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+  }
+
+  input{
+    display: block;
+    width: 40em;
+    height: 3em;
+    text-align: inherit;    
+  }
+  input::placeholder{
+    padding-left: 1em;
+    text-align: justify;
+  }
+
+  input:focus{
+    border-color: #FF2020;
+    background-color: gainsboro;
+  
+  }
+  input#check{
+    /* margin: 0 0.5em 0 0;  */
+    display: inline;
+    width: auto;
+    margin-top:1.5em ;
+    height: auto;
+  }
+
+  label#checkk{
+     margin-left: 0.5em; 
+     margin-top: 1.5em; 
+    font-size: 1.2em;
+    cursor: pointer;
+    display: inline-block;
+  }
+  #span{
+    color: #FF2020;
+    margin-left: 15em;
+   
+  }
+
+  input#check:checked {
+    background-color: #FF2020;
+    border-color: white;
+  }
+  #span2{
+    display: block;
+    margin-top: 5em;
+  }
+  #login{
+    background-color: #FF2020;
+    color: white;
+    border: none;
+    width: 7em;
+    height: 4em;
+    margin-top: 1em;
+    margin-left: 35em;
+    
+  }
+
+  
+  
