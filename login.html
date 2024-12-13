@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    
+    <div class="login">
+        <h1 id="h1">Login</h1>
+        <h3 id="h2">Enter Login details to get access</h3>
+
+       <form action="">
+        <label for="" id="username">Username</label>
+        <input type="text" name="userName" id="name" placeholder="Enter your name" >
+        <span id="sname" style="color: #FF2020; margin-top:1em;display:none">name must be at least 3 chars</span>
+        <label for="" id="Lemail">Email</label>
+        <input type="email" name="userEmail" id="email" placeholder="Enter your email" >
+        <span id="semail"  style="color: #FF2020; margin-top:1em;display:none">Email is not valid</span>
+        <label for="" id="password">Password</label>
+        <input type="password" name="UserPass" id="pass" placeholder="Enter your password">
+        <span id="spass"  style="color: #FF2020; margin-top:1em;display:none">Password must be 8 chars at least.</span>
+        <label for="" id="password">Confirm password</label>
+        <input type="password" name="userConPass" id="conpass" placeholder="Confirm your password" >
+        <span id="scpass"  style="color: #FF2020; margin-top:1em;display:none">Passwords doesn't match</span>
+        <input type="checkbox" id="check" name="userCheck">
+        <label for="" id="checkk">Keep me logged in</label>
+
+         <span id="span">Forgot Password?</span>
+
+         <span id="span2">Don’t have an account? <span style="color:#FF2020 ;">Sign Up</span> here</span>
+
+         <button type="submit" id="login" onclick="validate()">Login</button>
+
+       </form>
+      
+
+
+    </div>
+<script src="./login.js"></script>
+</body>
+</html>
