@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce</title>
+  <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
-    <script src="./home.js"></script>
+  <nav>
+
+    <div class="logo">
+      <img src="images/market-stand-svgrepo-com.svg" alt="Capital Shop Logo" class="logo-image ">
+      <span class="logo-text ">Capital Shop</span>
+    </div>
+    <ul class="menu">
+      <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+      <li class="menu-item"><a href="#" class="menu-link">Men</a></li>
+      <li class="menu-item"><a href="#" class="menu-link">Women</a></li>
+      <li class="menu-item"><a href="#" class="menu-link">Baby Collection<span class="badge">New</span></a></li>
+      <li class="menu-item dropdown">
+        <a href="#" class="menu-link">Pages <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-link">Login</a></li>
+          <li><a href="#" class="dropdown-link">Cart</a></li>
+          <li><a href="#" class="dropdown-link">Product Details</a></li>
+          <li><a href="#" class="dropdown-link">Product Checkout</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+    </ul>
+    <div class="icons">
+      <a href="#" class="icon-link svg-icon"><img src="images/search-alt-1-svgrepo-com.svg" alt="Search"></a>
+      <a href="#" class="icon-link svg-icon"><img src="images/user-icon-svgrepo-com.svg" alt="User"></a>
+      <a href="#" class="icon-link cart-icon ">
+        <img class="svg-icon" src="images/cart-shopping-svgrepo-com.svg" alt="Cart">
+        <span class="cart-badge">1</span>
+      </a>
+
+    </div>
+  </nav>
+
+  <header>
+    <div class="top-banner" style="z-index: 0;">
+      Sale Up To 50% Biggest Discounts. Hurry! Limited Period Offer <a href="#">Shop Now</a>
+    </div>
+
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img id="imgSlide" src="images/girl-slider (2).jpg" alt="Fashion Sale">
+        <div class="slide-content">
+          <h3>Fashion Sale</h3>
+          <h1>Minimal Menz Style</h1>
+          <p>
+            Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure,
+            delectus dignissimos facilis neque nulla earum.
+          </p>
+          <a href="#" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+
+
+
+      <!-- Slider Controls -->
+      <div class="controls">
+        <button id="prev" onclick="test()">&#10094;</button>
+        <button id="next" onclick="test()">&#10095;</button>
+      </div>
+    </div>
+  </header>
+  <main style="height: 10000px;">
+  </main>
+
+  <script src="./home.js"></script>
+
+
+
+
+
 </body>
+
 </html>

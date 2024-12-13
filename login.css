@@ -1,11 +1,13 @@
 .login{
     width: 45em;
-    height: 60em;
+    /* height: 60em; */
     /* border: 2px black solid; */
     background-color: white;
     align-items: center;
  
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px 0 20px rgba(0, 0, 0, 0.2);
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 body {

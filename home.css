@@ -1,0 +1,246 @@
+:root{
+    --color:red;  /*  declar global variable */
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 4em;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: invert(26%) sepia(82%) saturate(7400%) hue-rotate(0deg) brightness(96%) contrast(102%);
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu {
+    z-index: 10;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.menu-link:hover {
+    color: var(--color);
+}
+
+.badge {
+    font-size: 12px;
+    color: #fff;
+    background-color:var(--color);
+    padding: 2px 5px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-menu .dropdown-link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.dropdown-menu .dropdown-link:hover {
+    background-color: #f8f8f8;
+    color: var(--color);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    z-index: 1000;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon-link {
+    margin-left: 2em;
+    position: relative;
+}
+
+.icon-link img {
+    width: 2em;
+    height: 3em;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--color);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.arrow {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.svg-icon {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%) brightness(0) invert(0) sepia(100%) hue-rotate(0deg);
+    transition: filter 0.3s ease;
+}
+
+.svg-icon:hover {
+    filter: invert(26%) sepia(82%) saturate(7400%) hue-rotate(0deg) brightness(96%) contrast(102%);
+    /* Experiment with `filter` values to match your desired "red" hover effect */
+}
+
+
+
+
+/*==============================================================================================*/
+ 
+
+header {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .top-banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    
+  }
+  
+  .top-banner a {
+    color: rgba(255, 255, 0, 0.482);
+    text-decoration: none;
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: max-content;
+  }
+  
+  .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    text-align: center;
+    transform: translateY(-50%);
+    color: black;
+  }
+  
+  .slide-content h3 {
+    color: red;
+    font-size: 24px;
+  }
+  
+  .slide-content h1 {
+    font-size: 40px;
+    margin: 10px 0;
+  }
+  
+  .slide-content p {
+    max-width: 400px;
+  }
+  
+  .shop-now {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .shop-now:hover {
+    background-color: red;
+  }
+  
+  .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .controls button {
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+    padding: 20px 10px;
+    background: rgba(51, 46, 46, 0.246);
+    
+   
+   
+  }
+  
+  .controls button:hover {
+    background: rgb(16, 13, 13);
+    color: white;
+  }
