@@ -1,19 +1,27 @@
+document.addEventListener("DOMContentLoaded", () => {
+  let pictures = [
+    "./images/girl-slider.jpg",
+    "./girl-slider-2.jpg",
+    "./girl-slider-3.jpg",
+    "./images/man-slider.jpg"
+  ];
+  let currentIndex=0;
 
-let pictures=["girl-slider.jpg","girl-slider (2).jpg","girl-slider (3).jpg","man-slider.jpg"];
-imageURL="images/";
-let img=document.getElementById("imgSlide");
-let index=0;
-function prev(){
-  index--;
-  index=((index%4)+4)%4;
-  img.setAttribute("src",imageURL+pictures[index]);
-  console.log(index);
+  let img = document.getElementById("imgSlide");
+  let btnPrev = document.getElementById("prev");
+  let btnNext = document.getElementById("next");
+ 
 
-}
-function test(){
-  console.log("hello");
-}
-let btnPrev=document.getElementById("prev");
-btnPrev.onclick=test;
+  function prev() {
+      currentIndex = (currentIndex - 1 + pictures.length) % pictures.length;
+      img.src = pictures[currentIndex];
+  }
 
-console.log("tota")
+  function next() {
+      currentIndex = (currentIndex + 1) % pictures.length;
+      img.src = pictures[currentIndex];
+  }
+
+  btnPrev.addEventListener("click", prev);
+  btnNext.addEventListener("click", next);
+});
