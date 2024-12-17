@@ -59,10 +59,11 @@
  #div3{
     display: flex;
   justify-content: center; 
+  margin-top: 10px;
  
  }
 
- button{
+ #add_to_cart{
     width: 200px;
     height: 50px;
     border: none;
