@@ -1,19 +1,39 @@
+let prevbtn = document.getElementById('prev');
+let nextbtn = document.getElementById('next');
 
-let pictures=["girl-slider.jpg","girl-slider (2).jpg","girl-slider (3).jpg","man-slider.jpg"];
-imageURL="images/";
-let img=document.getElementById("imgSlide");
-let index=0;
+
+
+let sliderImg = 0;
+let img = document.getElementById("slider-img");
+let slider = document.getElementsByTagName("header");
+
+
+
+var interval;
+
+interval = setInterval(next, 3000);
+
+
+ slider[0].addEventListener('mouseenter',()=>clearInterval(interval));   
+ nextbtn.addEventListener('mouseenter',()=>clearInterval(interval));
+ prevbtn.addEventListener('mouseenter',()=>clearInterval(interval));
+ slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 3000));
+ function next() {
+    sliderImg++;
+    sliderImg = ((sliderImg % 3) + 3) % 3;
+    img.setAttribute("src", `images/${sliderImg}.jpg`);
+}
 function prev(){
-  index--;
-  index=((index%4)+4)%4;
-  img.setAttribute("src",imageURL+pictures[index]);
-  console.log(index);
 
+    sliderImg--;
+    sliderImg = ((sliderImg % 3) + 3) % 3;
+    img.setAttribute("src", `images/${sliderImg}.jpg`);
 }
-function test(){
-  console.log("hello");
-}
-let btnPrev=document.getElementById("prev");
-btnPrev.onclick=test;
 
-console.log("tota")
+
+
+
+nextbtn.addEventListener('click', next);
+
+
+prevbtn.addEventListener('click',prev);

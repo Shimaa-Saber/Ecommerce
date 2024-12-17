@@ -1,10 +1,90 @@
+
+
+/* import font family */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+ /* set colors variables */
 :root{
-    --color:red;  /*  declar global variable */
+    --main-color: red;
+    --dark-color: #222;
+    --paragraph-color:#666;
+    --border-color:#6666662a;
 }
-body {
+html{
+    font-size: 14px;
+   
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
 }
+p,.w-color{
+    color: var(--paragraph-color);
+}
+.dark-color{
+    color: var(--dark-color);
+}
+h1,h2,h3,h4,h5,h6,a{
+    color: var(--dark-color);
+}
+
+/* my custom grid */
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.6%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+.row::after{
+    content:"";
+    clear:both;
+    display: table;
+}
+[class*="col-"]{
+   float:left;
+   padding: 5px; 
+}
+
+li{
+    display: inline;
+}
+.border-right{
+    display: block;
+    border-right: 2px var(--border-color) solid;
+}
+.border-bottom{
+    display: block;
+    border-bottom: 2px var(--border-color) solid;
+}
+.container{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+}
+#top-bar{
+    z-index: -1;
+    position: sticky;
+    top: 0;;
+}
+
+
+
+
+
+/*=========================*/
 
 nav {
     position:sticky;
@@ -149,7 +229,7 @@ nav {
  
 
 header {
-    position: relative;
+    position: static;
     z-index: -1;
     width: 100%;
     overflow: hidden;
@@ -170,7 +250,8 @@ header {
   }
   .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: 1s ;
+    overflow: hidden;
   }
   
   .slide {
@@ -180,7 +261,7 @@ header {
   
   .slide img {
     width: 100%;
-    height: max-content;
+    height: 700px;
   }
   
   .slide-content {
@@ -220,27 +301,34 @@ header {
     background-color: red;
   }
   
-  .controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+
+  #prev,
+  #next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 1px solid #eee9;
+      background-color: rgba(27, 13, 13, 0.333);
+      color: #eee;
+      font-size: x-large;
+      font-family: monospace;
+      cursor: pointer;
+      z-index: 15;
   }
-  
-  .controls button {
-    cursor: pointer;
-    font-size: 30px;
-    color: black;
-    padding: 20px 10px;
-    background: rgba(51, 46, 46, 0.246);
-    
-   
-   
+  #prev{
+      left: 20px;
   }
-  
-  .controls button:hover {
-    background: rgb(16, 13, 13);
-    color: white;
+  #next{
+      right: 20px;
   }
+
+
+
+/* footer */
+footer{
+    background-color: #eee;
+}
