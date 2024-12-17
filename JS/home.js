@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
       img.src = pictures[currentIndex];
   }
 
+
+
+  function autoSlide() {
+    currentIndex = (currentIndex + 1) % pictures.length;
+    img.src = pictures[currentIndex];
+  }
+
+  
+  setInterval(autoSlide, 3000);
+
   btnPrev.addEventListener("click", prev);
   btnNext.addEventListener("click", next);
 });
