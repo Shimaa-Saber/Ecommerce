@@ -326,6 +326,33 @@ header {
       right: 20px;
   }
 
+
+  /* categry */
+  .categry{
+    width: 80%;
+    margin: auto;
+    margin-top: 7em;
+   
+  }
+  .categry h2{
+    text-align: left;
+    color: #FF5722;
+    font-size: 3em;
+    
+  }
+  .categry h3{
+   
+    padding: 3em .5em;
+  }
+  .categry h3:hover{
+   
+    color:red;
+    border-bottom:red solid 3px ;
+  }
+
+
+
+
 /* Product Card Container */
 .products-container {
   display: flex;
@@ -422,6 +449,34 @@ header {
 
 /* footer */
 footer{
-    background-color: #eee;
+    background-color: #0c0909;
+    color: white;
     
 }  
+#footer{
+  padding: 3em;
+}
+footer input{
+  width: 20em;
+  height: 4em;
+}
+footer button{
+  width: 6em;
+  height: 4em;
+  background-color: red;
+  color: #eee;
+}
+footer h2,footer h3{
+  color: white;
+  font-size: 2em;
+  margin: .5em;
+}
+footer h2{
+  font-size: 2em;
+}
+footer p,footer i{
+  color: rgba(231, 223, 223, 0.893);
+  font-size: 1.5em;
+  margin: .5em;
+}
+
