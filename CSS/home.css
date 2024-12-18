@@ -220,13 +220,12 @@ header {
     background-color: red;
   }
   
-  .controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+
+  #prev,
+  #next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
   }
   
   .controls button {
@@ -245,10 +244,6 @@ header {
     color: white;
   }
 
-  .categories, .featured-products {
-    text-align: center;
-    padding: 50px 0;
-  }
   
   .category-cards, .product-cards {
     display: flex;
@@ -265,18 +260,9 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .category-card img, .product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
   
-  .category-card h3, .product-card p {
-    margin-top: 10px;
-  }
   
-  .product-card p {
-    color: #ff6347;
-    font-size: 18px;
-  }
-  
+/* footer */
+footer{
+    background-color: #eee;
+}  
