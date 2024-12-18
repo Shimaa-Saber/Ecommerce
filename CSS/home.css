@@ -261,7 +261,7 @@ header {
   
   .slide img {
     width: 100%;
-    height: 700px;
+    height: 400px;
   }
   
   .slide-content {
@@ -423,4 +423,5 @@ header {
 /* footer */
 footer{
     background-color: #eee;
+    
 }  
