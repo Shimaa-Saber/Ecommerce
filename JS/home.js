@@ -1,6 +1,10 @@
 let prevbtn = document.getElementById('prev');
 let nextbtn = document.getElementById('next');
 
+const productsContainer = document.getElementById("products-container");
+const menBtn = document.getElementById("men-btn");
+const womenBtn = document.getElementById("women-btn");
+
 
 
 let sliderImg = 0;
@@ -18,7 +22,7 @@ interval = setInterval(next, 3000);
  nextbtn.addEventListener('mouseenter',()=>clearInterval(interval));
  prevbtn.addEventListener('mouseenter',()=>clearInterval(interval));
  slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 3000));
-  function next() {
+ function next() {
     sliderImg++;
     sliderImg = ((sliderImg % 3) + 3) % 3;
     img.setAttribute("src", `images/${sliderImg}.jpg`);
@@ -28,79 +32,84 @@ function prev(){
     sliderImg--;
     sliderImg = ((sliderImg % 3) + 3) % 3;
     img.setAttribute("src", `images/${sliderImg}.jpg`);
+}
+
+
+
+
+nextbtn.addEventListener('click', next);
+
+
+prevbtn.addEventListener('click',prev);
+
+
+function fetchProducts(category = "") {
+  let apiURL = "https://fakestoreapi.com/products";
+  
+  if (category) {
+    apiURL += `/category/${category}`;
   }
 
+  fetch(apiURL)
+    .then((res) => res.json())
+    .then((products) => {
 
+      productsContainer.innerHTML = "";
 
-fetch("https://fakestoreapi.com/products")
-  .then((res) => res.json())
-  .then((products) => {
-    })
-    .catch((error) => console.error("Error fetching products:", error));
-}
-
-
-function navigateToDetails(productId) {
-  
-  window.location.href = `product-details.html?id=${productId}`;
-}
-    })
-    .catch((error) => console.error("Error fetching products:", error));
-}
-
-
-function navigateToDetails(productId) {
-  
-  window.location.href = `product-details.html?id=${productId}`;
-}
-    })
-    .catch((error) => console.error("Error fetching products:", error));
-}
-
-
-function navigateToDetails(productId) {
-  
-  window.location.href = `product-details.html?id=${productId}`;
-}
-    // Loop through products and add to the container
-    products.forEach((product) => {
-      const productCard = `
-        <div class="product-card">
-          <img src="${product.image}" alt="${product.title}" class="product-image" />
-          <div class="product-details">
-            <h3>${product.title}</h3>
-            <p class="product-price">$${product.price}</p>
+      products.forEach((product) => {
+        const productCard = `
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.title}" class="product-image" />
+            <div class="product-details">
+            
+              <p class="product-price">$${product.price}</p>
+            </div>
+            <div class="icons">
+             <div class="icon cart"  onclick="addToCart(${product.id})">🛒</div>
+             <div class="icon heart">❤️</div>
+             <div class="icon search"  onclick="navigateToDetails(${product.id})">🔍</div>
+            </div>
           </div>
-        </div>
-      `;
-      productsContainer.innerHTML += productCard;
-    });
-})
-.catch(error => console.error('Error fetching products:', error));
-
-
-function displayProducts(products) {
-productContainer.innerHTML = ''; 
-
-products.forEach(product => {
-    const productDiv = document.createElement("div");
-    productDiv.classList.add("cart-item");
-
-    productDiv.innerHTML = `
-        <img src="${product.image}" alt="${product.title}" class="product-img">
-        <div class="product-details">
-            <h3>${product.title}</h3>
-            <p class="price" data-price="${product.price}">Price: $${product.price.toFixed(2)}</p>
-        </div>
-        <div class="quantity-controls">
-            <button class="minus-btn" onclick="updateQuantity(${product.id}, -1)">-</button>
-            <input type="number" value="1" min="1" class="quantity-input" data-id="${product.id}" onchange="changeQuantity(${product.id}, this.value)">
-            <button class="plus-btn" onclick="updateQuantity(${product.id}, 1)">+</button>
-        </div>
-        <p class="total-price" data-id="${product.id}">$${product.price.toFixed(2)}</p>
-        <button class="remove-btn" onclick="removeFromCart(${product.id})">Remove</button>
-    `;
-
-    productContainer.appendChild(productDiv);
-});
+        `;
+        productsContainer.innerHTML += productCard;
+      });
+    })
+    .catch((error) => console.error("Error fetching products:", error));
 }
+
+menBtn.addEventListener("click", () => {
+  fetchProducts("men's clothing");
+});
+
+womenBtn.addEventListener("click", () => {
+  fetchProducts("women's clothing");
+});
+
+function navigateToDetails(productId) {
+  
+  window.location.href = `productDetailes.html?id=${productId}`;
+}
+
+
+function addToCart(productId) {
+  fetch(`https://fakestoreapi.com/products/${productId}`)
+    .then(res => res.json())
+    .then(product => {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+      if (existingProductIndex !== -1) {
+        cart[existingProductIndex].quantity++;
+      } else {
+        product.quantity = 1;
+        cart.push(product);
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${product.title} added to cart!`);
+    })
+    .catch(error => console.error("Error adding to cart:", error));
+}
+
+
+fetchProducts();

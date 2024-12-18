@@ -7,37 +7,11 @@
   <link rel="stylesheet" href="./CSS/cart.css">
 </head>
 <body>
-  <div class="cart-container">
+  <div class="cart-container" >
+    <div id="cart-items-container">
 
-    <div class="cart-item">
-      <img src="./images/blank-1886013_1280.png" alt="Chair" class="product-img">
-      <div class="product-details">
-        <h3>Minimalistic shop for multipurpose use</h3>
-        <p class="price" data-price="360">Price: $360.00</p>
-      </div>
-      <div class="quantity-controls">
-        <button class="minus-btn">-</button>
-        <input type="number" value="1" min="1" class="quantity-input">
-        <button class="plus-btn">+</button>
-      </div>
-      <p class="total-price">$360.00</p>
+
     </div>
-
-    <!-- Product 2 -->
-    <div class="cart-item">
-      <img src="./images/red-devils-1596355_1280.jpg" alt="Chair" class="product-img">
-      <div class="product-details">
-        <h3>Minimalistic shop for multipurpose use</h3>
-        <p class="price" data-price="360">Price: $360.00</p>
-      </div>
-      <div class="quantity-controls">
-        <button class="minus-btn">-</button>
-        <input type="number" value="1" min="1" class="quantity-input">
-        <button class="plus-btn">+</button>
-      </div>
-      <p class="total-price">$360.00</p>
-    </div>
-
 
     <div class="cart-buttons">
       <button class="update-cart">UPDATE CART</button>
@@ -45,10 +19,14 @@
     </div>
 
     <div class="cart-subtotal">
-        <h3>Subtotal</h3>
-        <p id="subtotal-amount">$0.00</p>
-      </div>
+      <h3>Subtotal</h3>
+      <p id="subtotal-amount">$0.00</p>
+    </div>
+    
   </div>
+
+
+  
 
   <script src="./JS/cart.js"></script>
 </body>

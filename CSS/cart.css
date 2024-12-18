@@ -46,7 +46,8 @@ body {
 
   .quantity-controls {
     display: flex;
-    align-items: center;
+    align-items: end;
+    margin-left: 260px;
   }
   .quantity-controls button {
     background-color: #FF2020;
