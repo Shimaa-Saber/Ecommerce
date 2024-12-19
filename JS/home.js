@@ -4,6 +4,10 @@ let nextbtn = document.getElementById('next');
 const productsContainer = document.getElementById("products-container");
 const menBtn = document.getElementById("men-btn");
 const womenBtn = document.getElementById("women-btn");
+const men=document.getElementById("men");
+const women=document.getElementById("women");
+const elec=document.getElementById("men");
+const jew=document.getElementById("men");
 
 
 
