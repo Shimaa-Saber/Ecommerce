@@ -58,12 +58,13 @@
 //   updateCart();
 //   });
   
-
+let buy_btn=document.getElementById("buy");
 document.addEventListener("DOMContentLoaded", () => {
-
+  
   var subtotalElement = document.getElementById("subtotal-amount");
   var minusButtons = document.getElementsByClassName("minus-btn");
   var plusButtons = document.getElementsByClassName("plus-btn");
+ 
   
 
   function renderCartItems() {
@@ -152,3 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCartItems();
 });
+
+buy_btn.addEventListener("click",()=>{
+  location.assign("./orderShiped.html");
+})
