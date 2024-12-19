@@ -109,7 +109,10 @@ form.addEventListener('submit', (event) => {
       form.appendChild(successMessage);
 
       
+
+      
       form.submit(); 
+      location.assign("./home.html")
   }
 
     
