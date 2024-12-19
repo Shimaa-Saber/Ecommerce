@@ -20,16 +20,16 @@ let slider = document.getElementsByTagName("header");
 
 var interval;
 
-interval = setInterval(next, 1500);
+interval = setInterval(next, 1000);
 
 
  slider[0].addEventListener('mouseenter',()=>clearInterval(interval));   
  nextbtn.addEventListener('mouseenter',()=>clearInterval(interval));
  prevbtn.addEventListener('mouseenter',()=>clearInterval(interval));
- slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 1500));
+ slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 1000));
  function next() {
     sliderImg++;
-    sliderImg = ((sliderImg % 3) + 3) % 3;
+    sliderImg = ((sliderImg % 4) + 4) % 4;
     img.setAttribute("src", `images/${sliderImg}.jpg`);
 }
 function prev(){
