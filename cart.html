@@ -4,9 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./CSS/cart.css">
+  <link rel="stylesheet" href="CSS/home.css">
 </head>
 <body>
+
+  
+  <div id="top-bar" class="row border-bottom container w-color">
+    <ul class="col-6 row bar">
+        <li><a href="#" class="col-3  w-color">About Us</a></li>
+        <li><a href="" class="col-3  w-color">Privacy</a></li>
+        <li><a href="" class="col-3  w-color">FAQ</a></li>
+        <li><a href="" class="col-3  w-color">Careers</a></li>
+    </ul>
+    <div class="col-2 "></div>
+    <ul class="col-4 row bar ">
+        <a href="#" class="col-4 border-right">My Wishlist</a>
+        <a href="#" class="col-4 border-right"> Track Your Order</a>
+        <ul class=" col-4 ">
+            <li><a href=""><i class="fa-brands fa-facebook"></i> </a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i> </a></li>
+            <li><a href=""> <i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href=""> <i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href=""> <i class="fa-brands fa-linkedin"></i> </a></li>
+        </ul>
+    </ul>
+
+</div>
+
+  <nav class="row" style="z-index: 1000;">
+    <div class="logo">
+      <img src="images/market-stand-svgrepo-com.svg" alt="Capital Shop Logo" class="logo-image ">
+      <span class="logo-text ">Capital Shop</span>
+    </div>
+    <ul class="menu">
+      <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+      <li class="menu-item"><a href="#" class="menu-link" id="men-btn">Men</a></li>
+      <li class="menu-item"><a href="#" class="menu-link" id="women-btn">Women</a></li>
+      <li class="menu-item"><a href="#" class="menu-link" id="women-btn">electronics</a></li>
+      <li class="menu-item"><a href="#" class="menu-link">jewelery<span class="badge">New</span></a></li>
+      <li class="menu-item dropdown">
+        <a href="#" class="menu-link">Pages <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="./login.html" class="dropdown-link">Login</a></li>
+          <li><a href="./cart.html" class="dropdown-link">Cart</a></li>
+
+      
+        </ul>
+      </li>
+
+      
+    </ul>
+    <div class="icons">
+      <a href="#" class="icon-link svg-icon"><img src="images/search-alt-1-svgrepo-com.svg" alt="Search"></a>
+      <a href="./login.html" class="icon-link svg-icon"><img src="images/user-icon-svgrepo-com.svg" alt="User"></a>
+      <a href="./cart.html" class="icon-link cart-icon ">
+        <img class="svg-icon" src="images/cart-shopping-svgrepo-com.svg" alt="Cart">
+        <span class="cart-badge" id="cart-badge">0</span>
+      </a>
+
+    </div>
+  </nav>
+
+  
+
+
   <div class="cart-container" >
     <div id="cart-items-container">
 
@@ -25,7 +90,65 @@
     
   </div>
 
-
+  <footer class="row" >
+    <div id="footer">
+      <div class="row border-bottom">
+        <div class="col-4">
+          <h2>Subscribe Newsletter</h2>
+          <p>Subscribe newsletter to get 5% on all products.</p>
+        </div>
+        <div class="col-4">
+          <input type="text" pattern="" placeholder="Enter your email">
+          <button class="">send</button>
+        </div>
+        <ul class=" col-4 ">
+          <li><a href=""><i class="fa-brands fa-facebook"></i> </a></li>
+          <li><a href=""><i class="fa-brands fa-twitter"></i> </a></li>
+          <li><a href=""> <i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href=""> <i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href=""> <i class="fa-brands fa-linkedin"></i> </a></li>
+        </ul>
+      </div>
+      
+      <div class="row border-bottom " >
+        <div class="col-4">
+          <h3>Shop Women</h3>
+          <ul>
+            <li><p>Clothing Fashion</p></li>
+            <li><p>Winter</p></li>
+            <li><p>Summer</p></li>
+            <li><p>Formal</p></li>
+            <li><p>Casual</p></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <h3>Shop Men</h3>
+          <ul>
+            <li><p>Clothing Fashion</p></li>
+            <li><p>Winter</p></li>
+            <li><p>Summer</p></li>
+            <li><p>Formal</p></li>
+            <li><p>Casual</p></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <h3>ELectronics</h3>
+          <ul>
+            <li><p>labtop</p></li>
+            <li><p>PC</p></li>
+            <li><p>mobile phone</p></li>
+            <li><p>tablet</p></li>
+          </ul>
+        </div>
+     
+      </div>
+      <div class="copy">
+        <p>Created by <span style="color: red;">Asmaa Abdullah & Shimaa Saber</span></p>
+      </div>
+      </div>
+    </div>
+    
+  </footer>
   
 
   <script src="./JS/cart.js"></script>
