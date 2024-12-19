@@ -14,7 +14,7 @@ function decreaseQuantity() {
   }
 
   function increaseQuantity() {
-    let counter=document.getElementById("count");
+    let counter=document.getElementById("count"); 
    
         counter.value++;
      
@@ -50,7 +50,7 @@ function decreaseQuantity() {
        <div id="div3">
         
        <button id="mins" style=" border:none;background-color:transparent;font-size:25px;margin-right:5px" onclick="decreaseQuantity()">-</button>
-       <input id="count" type="number" min="0" style=" margin-top:5px; margin-left:5px;border:none; width:37px;text-align:center;font-size:20px">
+       <input id="count" type="number" min="0"value="${product.quantity}" style=" margin-top:5px; margin-left:5px;border:none; width:37px;text-align:center;font-size:20px">
        <button id="plus"  style=" border: none;background-color:transparent;font-size:25px" onclick="increaseQuantity()">+</button>
        </div>
        

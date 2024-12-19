@@ -33,7 +33,8 @@
  #div1{
     display: inline-block;
     margin-left: 200px;
-    margin-top: 30px;
+    margin-top: 20px;
+   
      position: absolute;
      top: 20;
     right: 40;
@@ -69,5 +70,6 @@
     border: none;
     color: white;
     background-color:#FF2020 ;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 15px;
  }
