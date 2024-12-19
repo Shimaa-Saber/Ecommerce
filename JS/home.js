@@ -20,13 +20,13 @@ let slider = document.getElementsByTagName("header");
 
 var interval;
 
-interval = setInterval(next, 2500);
+interval = setInterval(next, 1500);
 
 
  slider[0].addEventListener('mouseenter',()=>clearInterval(interval));   
  nextbtn.addEventListener('mouseenter',()=>clearInterval(interval));
  prevbtn.addEventListener('mouseenter',()=>clearInterval(interval));
- slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 2500));
+ slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 1500));
  function next() {
     sliderImg++;
     sliderImg = ((sliderImg % 3) + 3) % 3;
