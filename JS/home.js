@@ -15,13 +15,13 @@ let slider = document.getElementsByTagName("header");
 
 var interval;
 
-interval = setInterval(next, 3000);
+interval = setInterval(next, 2500);
 
 
  slider[0].addEventListener('mouseenter',()=>clearInterval(interval));   
  nextbtn.addEventListener('mouseenter',()=>clearInterval(interval));
  prevbtn.addEventListener('mouseenter',()=>clearInterval(interval));
- slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 3000));
+ slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 2500));
  function next() {
     sliderImg++;
     sliderImg = ((sliderImg % 3) + 3) % 3;
@@ -89,8 +89,8 @@ function navigateToDetails(productId) {
   
   window.location.href = `productDetailes.html?id=${productId}`;
 }
-
-
+let ctr=0;
+let cartBadg=document.getElementById("cart-badge");
 function addToCart(productId) {
   fetch(`https://fakestoreapi.com/products/${productId}`)
     .then(res => res.json())
@@ -104,9 +104,10 @@ function addToCart(productId) {
         product.quantity = 1;
         cart.push(product);
       }
-
+      ctr++;
       localStorage.setItem('cart', JSON.stringify(cart));
-      alert(`${product.title} added to cart!`);
+      // alert(`${product.title} added to cart!`);
+      cartBadg.innerHTML=ctr;
     })
     .catch(error => console.error("Error adding to cart:", error));
 }

@@ -142,7 +142,7 @@ nav {
 .badge {
     font-size: 12px;
     color: #fff;
-    background-color:var(--color);
+    background-color:red;
     padding: 2px 5px;
     border-radius: 10px;
     margin-left: 5px;
@@ -199,7 +199,7 @@ nav {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: var(--color);
+    background-color: red;
     color: #fff;
     font-size: 12px;
     padding: 2px 5px;
@@ -261,7 +261,7 @@ header {
   
   .slide img {
     width: 100%;
-    height: 700px;
+    height: 600px;
   }
   
   .slide-content {
@@ -325,6 +325,33 @@ header {
   #next{
       right: 20px;
   }
+
+
+  /* categry */
+  .categry{
+    width: 80%;
+    margin: auto;
+    margin-top: 7em;
+   
+  }
+  .categry h2{
+    text-align: left;
+    color: #FF5722;
+    font-size: 3em;
+    
+  }
+  .categry h3{
+   
+    padding: 3em .5em;
+  }
+  .categry h3:hover{
+   
+    color:red;
+    border-bottom:red solid 3px ;
+  }
+
+
+
 
 /* Product Card Container */
 .products-container {
@@ -422,5 +449,44 @@ header {
 
 /* footer */
 footer{
-    background-color: #eee;
+    background-color: #0c0909;
+    color: white;
+    
 }  
+#footer{
+  padding: 3em;
+}
+footer input{
+  width: 20em;
+  height: 4em;
+}
+footer button{
+  width: 6em;
+  height: 4em;
+  background-color: red;
+  color: #eee;
+}
+footer h2,footer h3{
+  color: white;
+  font-size: 2em;
+  margin: .5em;
+}
+footer h2{
+  font-size: 2em;
+}
+footer p,footer i{
+  color: rgba(231, 223, 223, 0.893);
+  font-size: 1.5em;
+  margin: .5em;
+}
+#up{
+  position: fixed;
+  right: 1%;
+  top: 90%;
+}
+#up img{
+
+  width: 2em;
+  height: 2em;
+}
+
