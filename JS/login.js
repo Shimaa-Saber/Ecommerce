@@ -112,7 +112,7 @@ form.addEventListener('submit', (event) => {
 
       
       form.submit(); 
-      location.assign("./home.html")
+    
   }
 
     
