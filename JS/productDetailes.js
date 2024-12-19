@@ -39,7 +39,7 @@ function decreaseQuantity() {
    <h3 style="margin-top: 15px; color: #FF2020">${product.price}</h3>
    <span style="display: block;">Category :  <span style="margin-left: 20px; color:#FF2020;">${product.category}</span></span>
   
-   <span id="span2" style="padding-top:15px ; position:absolute; top:50;left:0" >Availibility :  <span  id="span3" style="margin-left: 20px; ">in Stock</span></span>
+   <span id="span2" style="padding-top:15px ;margin:10px" >Availibility :  <span  id="span3" style="margin-left: 20px; ">in Stock</span></span>
    
    <hr style="margin-top:70px">
    <p>

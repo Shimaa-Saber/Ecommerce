@@ -41,7 +41,7 @@
  }
 
  p{
-    width: 400px;
+  
     margin-top: 30px;
     font-family: "Poppins", sans-serif;
     color: #646D77;
@@ -72,4 +72,8 @@
     background-color:#FF2020 ;
     margin-top: 20px;
     margin-bottom: 15px;
+ }
+ main 
+ {
+   margin: 30px;
  }
