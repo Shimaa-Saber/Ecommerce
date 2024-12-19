@@ -94,12 +94,17 @@ document.addEventListener("DOMContentLoaded", () => {
         <button class="minus-btn">-</button>
         <input type="number" value="${item.quantity}" min="1" class="quantity-input">
         <button class="plus-btn">+</button>
-        <button onclick="removeItem(${index})" class="plus-btn" id="delete" style="margin:0px 5px"><i class="fa-solid fa-trash"></i></button>
+        <button  class="remove" data-index="${index}" id="delete" style="margin:0px 5px"><i class="fa-solid fa-trash"></i></button>
       </div>
       <p class="total-price" style="margin:0px 5px">$${(item.price * item.quantity).toFixed(2)}</p>
       
     </div>
+
+    
       `;
+
+     
+    
       
      
       cartContainer.appendChild(itemDiv);
@@ -123,6 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCartItems(); 
   }
 
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("remove") || e.target.closest(".remove")) {
+      const index = e.target.dataset.index || e.target.closest(".remove").dataset.index;
+      removeItem(index);
+    }
+  });
+  
 
   function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -131,6 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCartItems(); 
   }
 
+
+ 
  
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('minus-btn')) {
