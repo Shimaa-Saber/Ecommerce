@@ -363,6 +363,10 @@ header {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  
+  
+    z-index: 1; 
+
 }
 
 .product-card:hover .icons {
