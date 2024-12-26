@@ -7,10 +7,10 @@ main {
 }
 
 .product-container {
-   display: flex; /* Enables flex layout */
-   flex-wrap: wrap; /* Allows wrapping for smaller screens */
-   gap: 2rem; /* Space between the image and div */
-   align-items: flex-start; /* Align items to the top of the row */
+   display: flex;
+   flex-wrap: wrap; 
+   gap: 2rem; 
+   align-items: flex-start;
  }
  
  #img1 {
@@ -65,8 +65,8 @@ span {
 
 #add_to_cart {
    width: 100%;
-   max-width: 18.75rem; /* Equivalent to 300px */
-   height: 3rem; /* Equivalent to 48px */
+   max-width: 18.75rem; 
+   height: 3rem; 
    border: none;
    color: white;
    background-color: #FF2020;
