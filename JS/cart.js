@@ -193,9 +193,25 @@ function getCookie(name) {
 
 
 
-buy_btn.addEventListener("click",()=>{
-  location.assign("./orderShiped.html");
-})
+function isUserLoggedIn() {
+  const userEmail = getCookie("email"); 
+  return !!userEmail;
+}
+
+const buyBtn = document.getElementById("buy");
+
+buyBtn.addEventListener("click", () => {
+  if (isUserLoggedIn()) {
+    const successModal = new bootstrap.Modal(document.getElementById("successModal"));
+    successModal.show();
+    
+     // location.assign("./orderShiped.html");
+  } else {
+    
+      alert("Please log in to proceed with the purchase.");
+      location.assign("./login.html"); 
+  }
+});
 
 // Initialize ctr in local storage if it doesn't exist
 if (!localStorage.getItem('ctr')) {
