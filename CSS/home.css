@@ -32,53 +32,11 @@ p,.w-color{
 h1,h2,h3,h4,h5,h6,a{
     color: var(--dark-color);
 }
-
-/* my custom grid */
-.col-1{width: 8.33%;}
-.col-2{width: 16.66%;}
-.col-3{width: 25%;}
-.col-4{width: 33.33%;}
-.col-5{width: 41.66%;}
-.col-6{width: 50%;}
-.col-7{width: 58.33%;}
-.col-8{width: 66.6%;}
-.col-9{width: 75%;}
-.col-10{width: 83.33%;}
-.col-11{width: 91.66%;}
-.col-12{width: 100%;}
-
-.row::after{
-    content:"";
-    clear:both;
-    display: table;
-}
-[class*="col-"]{
-   float:left;
-   padding: 5px; 
+a{
+  text-decoration: none;
 }
 
-li{
-    display: inline;
-}
-.border-right{
-    display: block;
-    border-right: 2px var(--border-color) solid;
-}
-.border-bottom{
-    display: block;
-    border-bottom: 2px var(--border-color) solid;
-}
-.container{
-    display: flex;
-    width: 95%;
-    margin: auto;
-    justify-content: space-between;
-}
-#top-bar{
-    z-index: -1;
-    position: sticky;
-    top: 0;;
-}
+
 
 
 
@@ -86,13 +44,9 @@ li{
 
 /*=========================*/
 
-nav {
+nav#nav {
     position:sticky;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em 4em;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -337,12 +291,12 @@ header {
   .categry h2{
     text-align: left;
     color: #FF5722;
-    font-size: 3em;
+    font-size: 2rem;
     
   }
   .categry h3{
-   
-    padding: 3em .5em;
+    font-size: 1rem;
+    padding: 2rem .5rem;
   }
   .categry h3:hover{
    
@@ -491,3 +445,8 @@ footer p,footer i{
   height: 2em;
 }
 
+@media(max-width: 768px) {
+  #products{
+    text-align: center;
+  }
+}
