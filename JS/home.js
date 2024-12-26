@@ -2,8 +2,8 @@ let prevbtn = document.getElementById('prev');
 let nextbtn = document.getElementById('next');
 
 const productsContainer = document.getElementById("products-container");
-const menBtn = document.getElementById("men-btn");
-const womenBtn = document.getElementById("women-btn");
+//const menBtn = document.getElementById("men-btn");
+//const womenBtn = document.getElementById("women-btn");
 const men=document.getElementById("men");
 const women=document.getElementById("women");
 const elec=document.getElementById("elec");
@@ -20,19 +20,19 @@ const all=document.getElementById("all");
 
 // var interval;
 
-interval = setInterval(next, 1500);
+// interval = setInterval(next, 1500);
 
 
- slider[0].addEventListener('mouseenter',()=>clearInterval(interval));   
- nextbtn.addEventListener('mouseenter',()=>clearInterval(interval));
- prevbtn.addEventListener('mouseenter',()=>clearInterval(interval));
- slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 1500));
- function next() {
-    sliderImg++;
-    sliderImg = ((sliderImg % 3) + 3) % 3;
-    img.setAttribute("src", `images/${sliderImg}.jpg`);
-}
-function prev(){
+//  slider[0].addEventListener('mouseenter',()=>clearInterval(interval));   
+//  nextbtn.addEventListener('mouseenter',()=>clearInterval(interval));
+//  prevbtn.addEventListener('mouseenter',()=>clearInterval(interval));
+//  slider[0].addEventListener('mouseleave',()=>interval = setInterval(next, 1500));
+//  function next() {
+//     sliderImg++;
+//     sliderImg = ((sliderImg % 3) + 3) % 3;
+//     img.setAttribute("src", `images/${sliderImg}.jpg`);
+// }
+//function prev(){
 
 //     sliderImg--;
 //     sliderImg = ((sliderImg % 3) + 3) % 3;
@@ -82,13 +82,13 @@ function fetchProducts(category = "") {
     .catch((error) => console.error("Error fetching products:", error));
 }
 
-menBtn.addEventListener("click", () => {
-  fetchProducts("men's clothing");
-});
+// menBtn.addEventListener("click", () => {
+//   fetchProducts("men's clothing");
+// });
 
-womenBtn.addEventListener("click", () => {
-  fetchProducts("women's clothing");
-});
+// womenBtn.addEventListener("click", () => {
+//   fetchProducts("women's clothing");
+// });
 
 men.addEventListener("click", () => {
   fetchProducts("men's clothing");

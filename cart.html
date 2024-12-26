@@ -45,61 +45,85 @@
 
 
   
-  <div id="top-bar" class="row border-bottom container w-color">
+<div class=" d-none d-lg-block">
+  <div id="top-bar" class="row border-bottom w-color m">
     <ul class="col-6 row bar">
-        <li><a href="#" class="col-3  w-color">About Us</a></li>
-        <li><a href="" class="col-3  w-color">Privacy</a></li>
-        <li><a href="" class="col-3  w-color">FAQ</a></li>
-        <li><a href="" class="col-3  w-color">Careers</a></li>
+      <li class="col-3"><a href="#" class="w-color">About Us</a></li>
+      <li class="col-3"><a href="" class="col-3  w-color">Privacy</a></li>
+      <li class="col-3"><a href="" class="col-3  w-color">FAQ</a></li>
+      <li class="col-3"><a href="" class="col-3  w-color">Careers</a></li>
     </ul>
-    <div class="col-2 "></div>
-    <ul class="col-4 row bar ">
-        <a href="#" class="col-4 border-right">My Wishlist</a>
-        <a href="#" class="col-4 border-right"> Track Your Order</a>
+
+    <ul class="col-4 offset-lg-2 bar">
+      <div class="row">
+        <a href="#" class="col-4 border-end ">My Wishlist</a>
+        <a href="#" class="col-4 border-end"> Track Your Order</a>
         <ul class=" col-4 ">
-            <li><a href=""><i class="fa-brands fa-facebook"></i> </a></li>
-            <li><a href=""><i class="fa-brands fa-twitter"></i> </a></li>
-            <li><a href=""> <i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href=""> <i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href=""> <i class="fa-brands fa-linkedin"></i> </a></li>
+          <div class="row">
+            <li class="col-3"><a href=""><i class="fa-brands fa-facebook"></i> </a></li>
+            <li class="col-3"><a href=""><i class="fa-brands fa-twitter"></i> </a></li>
+            <li class="col-3"><a href=""> <i class="fa-brands fa-youtube"></i></a></li>
+            <li class="col-3"><a href=""> <i class="fa-brands fa-linkedin"></i> </a></li>
+          </div>
         </ul>
+      </div>
+
     </ul>
+
+  </div>
 
 </div>
 
-  <nav class="row" style="z-index: 1000;">
-    <div class="logo">
-      <img src="images/market-stand-svgrepo-com.svg" alt="Capital Shop Logo" class="logo-image ">
-      <span class="logo-text ">Capital Shop</span>
-    </div>
-    <ul class="menu">
-      <li class="menu-item"><a href="./home.html" class="menu-link">Home</a></li>
-      <li class="menu-item"><a href="#" class="menu-link" id="men-btn">Men</a></li>
-      <li class="menu-item"><a href="#" class="menu-link" id="women-btn">Women</a></li>
-      <li class="menu-item"><a href="#" class="menu-link" id="women-btn">electronics</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">jewelery<span class="badge">New</span></a></li>
-      <li class="menu-item dropdown">
-        <a href="#" class="menu-link">Pages <span class="arrow">&#9662;</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="./login.html" class="dropdown-link">Login</a></li>
-          <li><a href="./cart.html" class="dropdown-link">Cart</a></li>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/market-stand-svgrepo-com.svg" alt="Logo" class="me-2 logo-image"> Capital Shop
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="./home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Electronics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Jewelry <span class="new-badge">New</span></a>
+        
       
-        </ul>
-      </li>
-
-      
-    </ul>
-    <div class="icons">
-      <a href="#" class="icon-link svg-icon"><img src="images/search-alt-1-svgrepo-com.svg" alt="Search"></a>
-      <a href="./login.html" class="icon-link svg-icon"><img src="images/user-icon-svgrepo-com.svg" alt="User"></a>
-      <a href="./cart.html" class="icon-link cart-icon ">
-        <img class="svg-icon" src="images/cart-shopping-svgrepo-com.svg" alt="Cart">
-        <span class="cart-badge" id="cart-badge">0</span>
-      </a>
-
+            <li><a class="nav-link" href="#">About</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
+        
+        
+      </ul>
+      <div class="navbar-nav d-none d-lg-flex ">
+        <a href="#" class="btn btn-light me-2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="./login.html" class="btn btn-light me-2">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <a href="./cart.html" class="btn btn-light position-relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </a>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
 
   
 
