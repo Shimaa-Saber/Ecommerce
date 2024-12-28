@@ -5,7 +5,7 @@
 
  /* set colors variables */
 :root{
-    --main-color: red;
+    --main-color: #FF2020;
     --dark-color: #222;
     --paragraph-color:#666;
     --border-color:#6666662a;
@@ -49,6 +49,17 @@ nav#nav {
     top: 0;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbarNav ul li a{
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#navbarNav ul li a:hover{
+  color: #FF2020;
+  font-weight: bolder;
+
 }
 
 .logo {
@@ -96,7 +107,7 @@ nav#nav {
 .badge {
     font-size: 12px;
     color: #fff;
-    background-color:red;
+    background-color:#FF2020;
     padding: 2px 5px;
     border-radius: 10px;
     margin-left: 5px;
@@ -153,7 +164,7 @@ nav#nav {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: red;
+    background-color: #FF2020;
     color: #fff;
     font-size: 12px;
     padding: 2px 5px;
@@ -228,7 +239,7 @@ header {
   }
   
   .slide-content h3 {
-    color: red;
+    color: #FF2020;
     font-size: 24px;
   }
   
@@ -252,7 +263,7 @@ header {
   }
   
   .shop-now:hover {
-    background-color: red;
+    background-color:#FF2020;
   }
   
 
@@ -290,7 +301,7 @@ header {
   }
   .categry h2{
     text-align: left;
-    color: #FF5722;
+    color: #FF2020;
     font-size: 2rem;
     
   }
@@ -300,8 +311,8 @@ header {
   }
   .categry h3:hover{
    
-    color:red;
-    border-bottom:red solid 3px ;
+    color:#FF2020;
+    border-bottom:#FF2020 solid 3px ;
     cursor: pointer;
   }
 
@@ -352,7 +363,7 @@ header {
 .product-price {
   font-size: 16px;
   font-weight: bold;
-  color: #FF5722;
+  color: #FF2020;
 }
 
 .product-card {
@@ -388,7 +399,7 @@ header {
 
 .product-card .icon {
   font-size: 24px;
-  background: rgba(0, 0, 0, 0.5);
+  background: #ccc;
   color: white;
   padding: 10px;
   border-radius: 50%;
@@ -396,7 +407,7 @@ header {
 }
 
 .product-card .icon:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: whitesmoke;
 }
 
 footer {

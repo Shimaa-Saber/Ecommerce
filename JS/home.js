@@ -70,9 +70,9 @@ function fetchProducts(category = "") {
               <p class="product-price">$${product.price}</p>
             </div>
             <div class="icons">
-             <div class="icon cart"  onclick="addToCart(${product.id})">🛒</div>
+             <div class="icon cart"  onclick="addToCart(${product.id})"><i class="fa-solid fa-cart-shopping" style="color:black"></i></div>
              <div class="icon heart">❤️</div>
-             <div class="icon search"  onclick="navigateToDetails(${product.id})">🔍</div>
+             <div class="icon search"  onclick="navigateToDetails(${product.id})"><i class="fa-solid fa-magnifying-glass-plus"style="color:black"></i></div>
             </div>
           </div>
         `;
